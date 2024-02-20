@@ -14,12 +14,14 @@ mongoose.connect(process.env.DB_ip,{
   pass: process.env.DB_pass,
   dbName: process.env.DB_name
 });
+
 app.use(express.urlencoded({ extended: true }));
 
+app.engine("hbs", hbs.engine({ extname: ".hbs" }));
 app.set("view engine", "hbs");
 app.set("views", __dirname + "/views");
+app.use('/static', express.static('static'));
 
-app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.json());
 
