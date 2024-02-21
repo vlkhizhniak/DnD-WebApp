@@ -16,11 +16,16 @@ a:hover {
 a:active {
   text-decoration: none;
 }
+.card-main:hover {
+  transform: scale(1.05);
+
+}
 .card-main {
   height: 70vh;
   border-radius: 30px !important;
   width: 90% ;
   background-size: cover;
+  transition: transform 0.3s ease;
 }
 .card-nr-1{
   background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)), 
